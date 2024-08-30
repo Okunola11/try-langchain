@@ -7,3 +7,7 @@ langchain-community
 upstash-vector
 jupyter
 tiktoken
+fastapi
+uvicorn
+requests
+redis
