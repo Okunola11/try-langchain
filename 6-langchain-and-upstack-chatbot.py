@@ -1,16 +1,12 @@
-import os
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import UpstashVectorStore
 
-from langchain_openai import OpenAI
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnableParallel, RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
 
 from settings import OPEN_API_KEY, UPSTASH_VECTOR_REST_TOKEN, UPSTASH_VECTOR_REST_URL
-
-os.environ['OPENAI_API_KEY'] = OPEN_API_KEY
 
 embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
 

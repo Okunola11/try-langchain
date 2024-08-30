@@ -1,4 +1,3 @@
-import os
 import wikipedia
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import UpstashVectorStore
@@ -6,9 +5,7 @@ from langchain_core.documents import Document
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import TokenTextSplitter
 
-from settings import OPEN_API_KEY, UPSTASH_VECTOR_REST_TOKEN, UPSTASH_VECTOR_REST_URL
-
-os.environ['OPENAI_API_KEY'] = OPEN_API_KEY
+from settings import UPSTASH_VECTOR_REST_TOKEN, UPSTASH_VECTOR_REST_URL
 
 ny = wikipedia.page(title="New York City, New York")
 # print(ny.content)
